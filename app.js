@@ -1,18 +1,7 @@
 var express=require('express');
 var app=express();
 var PORT=process.env.PORT||process.argv[2]||3000;
-
-//middleware object
-var middleware={
-	requireAuthentication:function(req, res, next){
-		console.log('Private route hit!');
-		next();		
-	},
-	logger:function(req, res, next){
-		console.log('::Request: '+req.method+' '+req.originalUrl+' '+new Date().toString());
-		next();
-	}
-};
+var middleware=require('./middleware');
 
 //middleware
 //other middleware
