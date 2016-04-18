@@ -22,7 +22,7 @@ app.use(express.static(__dirname+'/public'));
 
 //routes
 app.get('/about', function(req, res){
-	res.send('About us');
+	res.send('About us!');
 });
 
 app.listen(PORT, function(){
